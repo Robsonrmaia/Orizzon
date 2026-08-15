@@ -121,12 +121,8 @@ em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .gallery-heading h2 { color: #fff; }
 .gallery-heading h2 em { color: var(--sand); }
 .gallery-heading > p { max-width: 330px; margin: 0 0 7px; color: rgba(255,255,255,.55); font-size: 13px; line-height: 1.7; }
-.gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: clamp(130px, 12vw, 220px); gap: 12px; }
-.gallery-item { position: relative; grid-column: span 4; grid-row: span 2; overflow: hidden; padding: 0; border: 0; background: #1c3334; cursor: zoom-in; }
-.gallery-item-1, .gallery-item-7 { grid-column: span 7; }
-.gallery-item-2, .gallery-item-8 { grid-column: span 5; }
-.gallery-item-5, .gallery-item-10 { grid-column: span 5; }
-.gallery-item-6, .gallery-item-9 { grid-column: span 7; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.gallery-item { position: relative; aspect-ratio: 4 / 3; overflow: hidden; padding: 0; border: 0; background: #1c3334; cursor: zoom-in; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .5s ease; }
 .gallery-item:hover img { transform: scale(1.045); filter: brightness(.82); }
 .gallery-item span { position: absolute; right: 17px; bottom: 14px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(10,28,29,.68); color: white; font-size: 9px; backdrop-filter: blur(10px); }
@@ -158,11 +154,21 @@ em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .broker-info p { margin: 0 0 13px; color: var(--ink-soft); font-size: 11px; }
 .broker-info span { display: block; margin-top: 5px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--sea); }
 .broker-card > a { grid-column: 2; display: flex; justify-content: space-between; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-.price-panel { display: flex; justify-content: space-between; align-items: end; margin: 80px 0 0 25%; padding: 44px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.price-panel p { margin: 0; color: var(--ink-soft); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-.price-panel strong { display: block; margin-top: 12px; font-family: Georgia, serif; font-size: clamp(40px, 5vw, 70px); font-weight: 400; }
-.price-panel strong small { font-family: Inter, sans-serif; font-size: 12px; font-weight: 400; color: var(--ink-soft); }
-.price-panel > p { max-width: 260px; line-height: 1.6; text-align: right; }
+.pricing { margin: 90px 0 0 25%; padding-top: 35px; border-top: 1px solid var(--ink); }
+.pricing-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 38px; }
+.pricing-heading .eyebrow { margin: 0 0 8px; }
+.pricing-heading h3 { margin: 0; font-family: Georgia, serif; font-size: clamp(35px, 4vw, 58px); font-weight: 400; line-height: 1; letter-spacing: -.035em; text-align: right; }
+.pricing-heading h3 em { color: var(--sea); }
+.pricing-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line); }
+.pricing-card { min-height: 220px; padding: 28px 25px; border-right: 1px solid var(--line); background: rgba(255,255,255,.3); }
+.pricing-card:last-child { border-right: 0; }
+.pricing-card > span { display: block; color: var(--gold); font-size: 9px; letter-spacing: .17em; text-transform: uppercase; }
+.pricing-card h4 { min-height: 46px; margin: 26px 0 32px; font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
+.pricing-card strong { display: block; white-space: nowrap; font-family: Georgia, serif; font-size: clamp(25px, 2.6vw, 39px); font-weight: 400; letter-spacing: -.025em; }
+.pricing-card strong small { margin-left: 3px; color: var(--ink-soft); font-family: Inter, sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0; }
+.pricing-card-sale { background: var(--ink); color: var(--cream); }
+.pricing-card-sale h4 { color: var(--sand); }
+.pricing-note { margin: 18px 0 0; color: var(--ink-soft); font-size: 9px; line-height: 1.6; letter-spacing: .1em; text-transform: uppercase; text-align: right; }
 
 footer { padding: 80px 4vw 35px; background: var(--ink); color: var(--cream); }
 .footer-brand { overflow: hidden; font-family: Georgia, serif; font-size: clamp(90px, 18vw, 270px); line-height: .75; letter-spacing: -.04em; color: #cbbfae; }
@@ -224,9 +230,7 @@ footer { padding: 80px 4vw 35px; background: var(--ink); color: var(--cream); }
   .gallery-section { padding: 90px 14px; }
   .gallery-heading { display: block; padding: 0 10px 45px; }
   .gallery-heading > p { margin-top: 28px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; gap: 8px; }
-  .gallery-item, .gallery-item-1, .gallery-item-2, .gallery-item-5, .gallery-item-6, .gallery-item-7, .gallery-item-8, .gallery-item-9, .gallery-item-10 { grid-column: span 1; grid-row: span 1; }
-  .gallery-item:nth-child(3n + 1) { grid-column: span 2; grid-row: span 2; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .video-section { grid-template-columns: 1fr; padding: 90px 24px; gap: 65px; }
   .video-frame { width: min(330px, 90%); }
   .location { grid-template-columns: 1fr; }
@@ -239,8 +243,14 @@ footer { padding: 80px 4vw 35px; background: var(--ink); color: var(--cream); }
   .broker-card { padding: 24px 20px; gap: 0 16px; }
   .broker-avatar { width: 55px; height: 55px; }
   .broker-info h3 { font-size: 21px; }
-  .price-panel { display: block; margin: 60px 0 0 8vw; }
-  .price-panel > p { margin-top: 25px; text-align: left; }
+  .pricing { margin: 65px 0 0 8vw; }
+  .pricing-heading { display: block; }
+  .pricing-heading h3 { margin-top: 15px; text-align: left; }
+  .pricing-options { grid-template-columns: 1fr; }
+  .pricing-card { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .pricing-card:last-child { border-bottom: 0; }
+  .pricing-card h4 { min-height: 0; margin: 18px 0 22px; }
+  .pricing-card strong { font-size: 35px; }
   .footer-meta { flex-wrap: wrap; }
   .footer-meta a { width: 100%; margin: 15px 0 0; }
   .floating-contact { right: 14px; bottom: 14px; }
@@ -257,10 +267,10 @@ footer { padding: 80px 4vw 35px; background: var(--ink); color: var(--cream); }
   .hero h1 { font-size: 16vw; }
   .button { min-width: min(100%, 280px); }
   .amenity-list { grid-template-columns: 1fr; }
-  .gallery-grid { grid-auto-rows: 170px; }
+  .gallery-grid { grid-template-columns: 1fr; }
   .cinematic-frame { height: 65vh; }
   .location-image { min-height: 390px; }
-  .broker-grid, .price-panel { margin-left: 0; }
+  .broker-grid, .pricing { margin-left: 0; }
   .footer-brand { font-size: 23vw; }
   .floating-contact { padding: 12px 14px; }
 }
