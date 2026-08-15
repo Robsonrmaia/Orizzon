@@ -71,11 +71,15 @@ em { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 .button-dark { color: #fff; background: var(--ink); }
 .text-link { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.45); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
 .text-link span { margin-left: 16px; }
-.hero-facts { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 4vw; border-top: 1px solid rgba(255,255,255,.25); opacity: 0; animation: fadeUp .9s 1.15s ease forwards; }
+.hero-facts { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0 4vw; border-top: 1px solid rgba(255,255,255,.25); opacity: 0; animation: fadeUp .9s 1.15s ease forwards; }
 .hero-facts div { padding: 23px 24px; border-right: 1px solid rgba(255,255,255,.2); }
 .hero-facts div:last-child { border-right: 0; }
-.hero-facts strong { display: block; font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+.hero-facts strong { display: block; white-space: nowrap; font-family: Georgia, serif; font-size: clamp(19px, 1.7vw, 25px); font-weight: 400; }
 .hero-facts span { display: block; margin-top: 6px; color: rgba(255,255,255,.6); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.hero-facts .hero-offer { background: rgba(12,34,35,.43); backdrop-filter: blur(8px); }
+.hero-facts .hero-offer strong { color: #f0dfc5; }
+.hero-facts .hero-offer span { color: rgba(255,255,255,.76); }
+.hero-facts .hero-offer-sale { background: rgba(185,152,103,.22); }
 .scroll-cue { position: absolute; right: 3.5vw; top: 45%; width: 18px; height: 92px; display: grid; place-items: center; }
 .scroll-cue::before { content: "scroll"; position: absolute; transform: rotate(90deg); font-size: 8px; letter-spacing: .24em; text-transform: uppercase; }
 .scroll-cue span { position: absolute; bottom: 0; width: 1px; height: 30px; background: rgba(255,255,255,.55); animation: scrollLine 1.8s ease-in-out infinite; }
@@ -209,7 +213,8 @@ footer { padding: 80px 4vw 35px; background: var(--ink); color: var(--cream); }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 10px; }
   .hero-facts { grid-template-columns: 1fr 1fr; margin: 0 18px; }
   .hero-facts div { padding: 13px 11px; }
-  .hero-facts div:nth-child(2) { border-right: 0; }
+  .hero-facts div:nth-child(even) { border-right: 0; }
+  .hero-facts div:nth-child(-n + 4) { border-bottom: 1px solid rgba(255,255,255,.16); }
   .hero-facts strong { font-size: 19px; }
   .scroll-cue { display: none; }
   .statement { grid-template-columns: 1fr; padding: 95px 24px; gap: 42px; }
