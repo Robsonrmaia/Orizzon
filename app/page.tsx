@@ -25,7 +25,7 @@ const amenities = [
 ];
 
 const whatsappMessage = encodeURIComponent(
-  "Olá! Tenho interesse no apartamento Orizzon, código GI97678. Gostaria de agendar uma visita.",
+  "Olá! Tenho interesse no apartamento Orizzon, código GI97678. Gostaria de conhecer as opções de locação e venda e agendar uma visita.",
 );
 
 const brokers = [
@@ -131,8 +131,8 @@ export default function Home() {
             <span>entra para morar.</span>
           </h1>
           <p className="hero-intro">
-            Um apartamento mobiliado no Orizzon, pensado para viver o mar com
-            conforto, luz natural e a elegância dos detalhes.
+            Um apartamento no Orizzon, disponível para locação mobiliada,
+            sem móveis ou venda — sempre com conforto, luz natural e elegância.
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="#corretores">
@@ -148,7 +148,7 @@ export default function Home() {
           <div><strong>105</strong><span>m² de área total</span></div>
           <div><strong>03</strong><span>quartos</span></div>
           <div><strong>02</strong><span>suítes</span></div>
-          <div><strong>R$ 7 mil</strong><span>locação mensal</span></div>
+          <div><strong>R$ 6,5 mil</strong><span>locação a partir de</span></div>
         </div>
         <div className="scroll-cue" aria-hidden="true"><span /></div>
       </section>
@@ -166,9 +166,9 @@ export default function Home() {
           </p>
         </div>
         <div className="statement-side" data-reveal>
-          <span>Locação anual</span>
-          <strong>Pronto para morar</strong>
-          <p>Condomínio contemporâneo da Almeida Carneiro, entregue em 2023.</p>
+          <span>Locação ou compra</span>
+          <strong>Escolha como viver</strong>
+          <p>Mobiliado, sem móveis ou para chamar de seu. Condomínio entregue em 2023.</p>
         </div>
       </section>
 
@@ -314,12 +314,29 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="price-panel" data-reveal>
-          <div>
-            <p>Valor da locação</p>
-            <strong>R$ 7.000<small>/mês</small></strong>
+        <div className="pricing" data-reveal>
+          <div className="pricing-heading">
+            <p className="eyebrow">Condições comerciais</p>
+            <h3>Escolha a opção<br /><em>ideal para você.</em></h3>
           </div>
-          <p>Valores e disponibilidade sujeitos a confirmação no momento do contato.</p>
+          <div className="pricing-options">
+            <article className="pricing-card">
+              <span>Locação</span>
+              <h4>Mobiliado</h4>
+              <strong>R$ 7.000<small>/mês</small></strong>
+            </article>
+            <article className="pricing-card">
+              <span>Locação</span>
+              <h4>Sem móveis</h4>
+              <strong>R$ 6.500<small>/mês</small></strong>
+            </article>
+            <article className="pricing-card pricing-card-sale">
+              <span>Venda</span>
+              <h4>Para chamar de seu</h4>
+              <strong>R$ 1.200.000</strong>
+            </article>
+          </div>
+          <p className="pricing-note">Valores e disponibilidade sujeitos a confirmação no momento do contato.</p>
         </div>
       </section>
 
