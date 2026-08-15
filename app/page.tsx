@@ -145,10 +145,12 @@ export default function Home() {
         </div>
 
         <div className="hero-facts" aria-label="Principais informações">
+          <div className="hero-offer"><strong>R$ 7 mil</strong><span>locação mobiliada</span></div>
+          <div className="hero-offer"><strong>R$ 6,5 mil</strong><span>locação sem móveis</span></div>
+          <div className="hero-offer hero-offer-sale"><strong>R$ 1,2 mi</strong><span>valor de venda</span></div>
           <div><strong>105</strong><span>m² de área total</span></div>
           <div><strong>03</strong><span>quartos</span></div>
           <div><strong>02</strong><span>suítes</span></div>
-          <div><strong>R$ 6,5 mil</strong><span>locação a partir de</span></div>
         </div>
         <div className="scroll-cue" aria-hidden="true"><span /></div>
       </section>
