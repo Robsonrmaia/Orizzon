@@ -147,7 +147,7 @@ export default function Home() {
         <div className="hero-facts" aria-label="Principais informações">
           <div className="hero-offer"><strong>R$ 7 mil</strong><span>locação mobiliada</span></div>
           <div className="hero-offer"><strong>R$ 6,5 mil</strong><span>locação sem móveis</span></div>
-          <div className="hero-offer hero-offer-sale"><strong>R$ 1,2 mi</strong><span>valor de venda</span></div>
+          <div className="hero-offer hero-offer-sale"><strong>R$ 1,3 mi</strong><span>valor de venda</span></div>
           <div><strong>105</strong><span>m² de área total</span></div>
           <div><strong>03</strong><span>quartos</span></div>
           <div><strong>02</strong><span>suítes</span></div>
@@ -335,7 +335,7 @@ export default function Home() {
             <article className="pricing-card pricing-card-sale">
               <span>Venda</span>
               <h4>Para chamar de seu</h4>
-              <strong>R$ 1.200.000</strong>
+              <strong>R$ 1.300.000</strong>
             </article>
           </div>
           <p className="pricing-note">Valores e disponibilidade sujeitos a confirmação no momento do contato.</p>
