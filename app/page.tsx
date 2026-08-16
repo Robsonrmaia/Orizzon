@@ -7,7 +7,7 @@ const gallery = [
   { src: "/images/gallery-02.webp", alt: "Sala de estar integrada, mobiliada e iluminada" },
   { src: "/images/gallery-03.webp", alt: "Painel de televisão planejado na sala" },
   { src: "/images/gallery-04.webp", alt: "Integração entre sala de estar, jantar e varanda" },
-  { src: "/images/gallery-05.webp", alt: "Vista para o mar a partir da varanda" },
+  { src: "/images/gallery-05.webp", alt: "Vista lateral para o mar a partir da varanda" },
   { src: "/images/gallery-06.webp", alt: "Varanda envidraçada com vista aberta" },
   { src: "/images/gallery-07.webp", alt: "Cozinha americana planejada" },
   { src: "/images/gallery-08.webp", alt: "Varanda gourmet com bancada" },
@@ -18,7 +18,7 @@ const gallery = [
 ];
 
 const amenities = [
-  "Vista para o mar", "Mobiliado", "Ar-condicionado", "Varanda",
+  "Vista lateral mar", "Mobiliado", "Ar-condicionado", "Varanda",
   "Cozinha americana", "Área de serviço", "Piscina", "Academia",
   "Espaço gourmet", "Churrasqueira", "Salão de festas", "Brinquedoteca",
   "Playground", "Portaria 24h", "Elevador",
@@ -263,7 +263,7 @@ export default function Home() {
         </div>
         <div className="video-frame" data-reveal>
           <iframe
-            src="https://www.youtube.com/embed/LGb9Sm24w40?rel=0"
+            src="https://www.youtube.com/embed/LGb9Sm24w40?rel=0&mute=1"
             title="Vídeo do apartamento Orizzon GI97678"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -274,7 +274,7 @@ export default function Home() {
 
       <section className="location">
         <div className="location-image" data-reveal>
-          <img src="/images/gallery-05.webp" alt="Vista para o mar na região do Orizzon" />
+          <img src="/images/gallery-05.webp" alt="Vista lateral para o mar na região do Orizzon" />
         </div>
         <div className="location-copy" data-reveal>
           <p className="eyebrow">Localização</p>
@@ -334,8 +334,13 @@ export default function Home() {
             </article>
             <article className="pricing-card pricing-card-sale">
               <span>Venda</span>
-              <h4>Para chamar de seu</h4>
+              <h4>Mobiliado</h4>
               <strong>R$ 1.300.000</strong>
+            </article>
+            <article className="pricing-card pricing-card-sale">
+              <span>Venda</span>
+              <h4>Sem móveis</h4>
+              <strong>R$ 1.250.000</strong>
             </article>
           </div>
           <p className="pricing-note">Valores e disponibilidade sujeitos a confirmação no momento do contato.</p>
@@ -343,7 +348,12 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand">ORIZZON</div>
+        <div
+          className="footer-brand"
+          style={{ fontSize: "clamp(64px, 18vw, 220px)", letterSpacing: "-0.055em", whiteSpace: "nowrap" }}
+        >
+          ORIZZON
+        </div>
         <div className="footer-meta">
           <span>Imóvel GI97678</span>
           <span>Ilhéus · Bahia</span>
